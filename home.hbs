@@ -1,0 +1,67 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area on the homepage --}}
+<main class="site-main">
+	<div class="site-content inner-wide">
+
+		{{!-- The featured posts carousel or intro --}}
+		{{#get "posts" filter="featured:true" limit="5" include="authors,tags" as |featured_posts|}}
+			{{#foreach featured_posts}}
+				{{#if @first}}
+				<aside class="featured-posts slider-loading" aria-label="Featured">
+					<div id="featured-slider" class="featured-slider">
+				{{/if}}
+						<div>
+							{{#if feature_image}}
+							<div class="slide-bg" style="background-image: url({{feature_image}})"></div>
+							{{/if}}
+							<div class="slide-content">
+								<div class="slide-vertical">
+									<div class="inner">
+										{{#if tags}}
+										<div class="post-tags">
+											{{tags separator=""}}
+										</div>
+										{{/if}}
+										<h2 class="post-title"><a href="{{{url}}}">{{title}}</a></h2>
+										<div class="post-meta">
+											by <span class="post-author">{{authors}}</span> on <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
+										</div><!-- .post-meta -->
+										<div class="read-more">
+											<a class="button light" href="{{url}}" title="{{title}}">Read More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				{{#if @last}}
+					</div><!-- .featured-slider -->
+					<div class="featured-counter"><span class="current"></span> / <span class="total"></span></div>
+				</aside><!-- .hero -->
+				{{/if}}
+			{{else}}
+				<div class="cover hero">
+					{{#if @site.cover_image}}
+					<div class="cover-bg" style="background-image: url({{@site.cover_image}})"></div>
+					{{/if}}
+					<div class="cover-content">
+						<div class="inner">
+							<div class="hero-wrap">
+								<h2 class="hero-title">{{@site.title}}</h2>
+								<p class="hero-text">{{@site.description}}</p>
+								{{#if @labs.subscribers}}
+								<p class="subscribe"><a href="{{@site.url}}/subscribe/" class="button light">Subscribe</a></p>
+								{{/if}}
+							</div>
+						</div><!-- .inner -->
+					</div><!-- .cover-content -->
+				</div><!-- .cover -->
+			{{/foreach}}
+		{{/get}}
+
+		{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+		{{> "loop"}}
+
+	</div><!-- .site-content -->
+</main><!-- .site-main -->
