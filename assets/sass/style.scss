@@ -680,7 +680,7 @@ code {
 
 pre {
 	background-color: #111;
-	color: #ccc;
+	color: #999;
 	font-size: 16px;
 	margin: 0 0 30px;
 	padding: 15px;
@@ -719,7 +719,7 @@ blockquote p:last-child {
 
 blockquote small,
 blockquote cite {
-	color: #ccc;
+	color: #999;
 	display: block;
 	font-size: 16px;
 	font-style: normal;
@@ -816,7 +816,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border-color: #ccc;
+	border-color: #999;
 	outline: 0;
 }
 
@@ -972,7 +972,7 @@ video {
 /* Captions */
 .kg-image-card figcaption,
 .kg-embed-card figcaption {
-	color: #ccc;
+	color: #999;
 	font: normal 12px/1.5 $alt-font;
 	letter-spacing: 1px;
 	padding-top: 10px;
@@ -1095,7 +1095,7 @@ pre .storage {
 
 /* Buttons */
 .button {
-	border: 2px solid #ccc;
+	border: 2px solid #999;
 	color: #666;
 	display: inline-block;
 	font: bold 12px/1.5 $alt-font;
@@ -1105,14 +1105,15 @@ pre .storage {
 }
 
 .square {
-	border: 2px solid #eee;
-	color: #ccc;
+	border: 1px solid #eee;
+	color: #999;
 	display: inline-block;
 	font-size: 14px;
 	height: 36px;
 	line-height: 2.57142;
 	text-align: center;
-	width: 36px;
+    width: 36px;
+    border-radius: 4px;
 }
 
 button.square,
@@ -1138,9 +1139,9 @@ input[type="button"].square {
 
 .button:hover,
 .square:hover {
-	background-color: $color-accent;
-	border-color: $color-accent;
-	color: #111;
+	background-color: $color-accent-light;
+	border-color: $color-accent-light;
+	color: #fff;
 }
 
 /* Custom icons */
@@ -1461,7 +1462,8 @@ input[type="button"].square {
 }
 
 .site-header .site-navigation {
-	float: left;
+    float: right;
+    margin: -3px 90px 0 0;
 }
 
 .site-header .menu-item {
@@ -1631,7 +1633,7 @@ input[type="button"].square {
 
 .results-info,
 .result-date {
-	color: #ccc;
+	color: #999;
 	font: 12px/1.5 $alt-font;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -1694,7 +1696,8 @@ input[type="button"].square {
 
 .post-tags a:hover {
 	background-color: transparent;
-	border-color: #fff;
+    border-color: $color-accent-light;
+    background: $color-accent-light;
 	color: #fff;
 }
 
@@ -1706,7 +1709,7 @@ input[type="button"].square {
 }
 
 .post-meta {
-	color: #ccc;
+	color: #999;
 	font: 12px/1.5 $alt-font;
 	letter-spacing: 1px;
 	margin-bottom: 30px;
@@ -1721,12 +1724,12 @@ input[type="button"].square {
 
 .post-meta a {
 	border-color: transparent;
-	color: $color-accent;
+	color: $color-dark;
 }
 
 .post-meta a:hover {
-	border-color: #fff;
-	color: #fff;
+	border-color: #000;
+	color: #000;
 }
 
 .tag-template .post-meta a,
@@ -1747,7 +1750,7 @@ input[type="button"].square {
 
 .share-post {
 	font: 12px/1.5 $alt-font;
-	color: #ccc;
+	color: #999;
 	letter-spacing: 1px;
 	margin-bottom: 60px;
 	margin-top: 30px;
@@ -1771,8 +1774,7 @@ input[type="button"].square {
 
 .author-list-title {
 	background: $color-accent;
-	color: #111;
-	font-family: "Montserrat", sans-serif;
+	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
 	left: 50%;
@@ -2075,7 +2077,7 @@ input[type="button"].square {
 
 .post-count,
 .page-header .author-links {
-	color: #ccc;
+	color: #999;
 	margin-bottom: 15px;
 }
 
@@ -2377,7 +2379,7 @@ input[type="button"].square {
 }
 
 .nav-date {
-	color: #ccc;
+	color: #999;
 	font-size: 12px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -2438,7 +2440,7 @@ input[type="button"].square {
 
 .widget-recent-posts li {
 	border-bottom: 1px solid #eee;
-	color: #ccc;
+	color: #999;
 	margin-bottom: 15px;
 	padding-bottom: 15px;
 	position: relative;
@@ -2589,7 +2591,7 @@ input[type="button"].square {
 
 .offsite-links a {
 	background-color: #252525;
-	color: #ccc;
+	color: #999;
 	display: block;
 	-webkit-flex: 0 0 40px;
 	-ms-flex: 0 0 40px;

@@ -600,7 +600,7 @@ code {
 
 pre {
   background-color: #111;
-  color: #ccc;
+  color: #999;
   font-size: 16px;
   margin: 0 0 30px;
   padding: 15px;
@@ -639,7 +639,7 @@ blockquote p:last-child {
 
 blockquote small,
 blockquote cite {
-  color: #ccc;
+  color: #999;
   display: block;
   font-size: 16px;
   font-style: normal;
@@ -736,7 +736,7 @@ input[type=url]:focus,
 input[type=password]:focus,
 input[type=search]:focus,
 textarea:focus {
-  border-color: #ccc;
+  border-color: #999;
   outline: 0;
 }
 
@@ -892,7 +892,7 @@ video {
 /* Captions */
 .kg-image-card figcaption,
 .kg-embed-card figcaption {
-  color: #ccc;
+  color: #999;
   font: normal 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
@@ -1015,7 +1015,7 @@ pre .storage {
 
 /* Buttons */
 .button {
-  border: 2px solid #ccc;
+  border: 2px solid #999;
   color: #666;
   display: inline-block;
   font: bold 12px/1.5 "Gilroy", sans-serif;
@@ -1025,14 +1025,15 @@ pre .storage {
 }
 
 .square {
-  border: 2px solid #eee;
-  color: #ccc;
+  border: 1px solid #eee;
+  color: #999;
   display: inline-block;
   font-size: 14px;
   height: 36px;
   line-height: 2.57142;
   text-align: center;
   width: 36px;
+  border-radius: 4px;
 }
 
 button.square,
@@ -1058,9 +1059,9 @@ input[type=button].square {
 
 .button:hover,
 .square:hover {
-  background-color: #5072ff;
-  border-color: #5072ff;
-  color: #111;
+  background-color: #4561ff;
+  border-color: #4561ff;
+  color: #fff;
 }
 
 /* Custom icons */
@@ -1503,7 +1504,8 @@ body.hidden-scroll {
 }
 
 .site-header .site-navigation {
-  float: left;
+  float: right;
+  margin: -3px 90px 0 0;
 }
 
 .site-header .menu-item {
@@ -1670,7 +1672,7 @@ body.hidden-scroll {
 
 .results-info,
 .result-date {
-  color: #ccc;
+  color: #999;
   font: 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1733,7 +1735,8 @@ body.hidden-scroll {
 
 .post-tags a:hover {
   background-color: transparent;
-  border-color: #fff;
+  border-color: #4561ff;
+  background: #4561ff;
   color: #fff;
 }
 
@@ -1745,7 +1748,7 @@ body.hidden-scroll {
 }
 
 .post-meta {
-  color: #ccc;
+  color: #999;
   font: 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 30px;
@@ -1760,12 +1763,12 @@ body.hidden-scroll {
 
 .post-meta a {
   border-color: transparent;
-  color: #5072ff;
+  color: #162765;
 }
 
 .post-meta a:hover {
-  border-color: #fff;
-  color: #fff;
+  border-color: #000;
+  color: #000;
 }
 
 .tag-template .post-meta a,
@@ -1786,7 +1789,7 @@ body.hidden-scroll {
 
 .share-post {
   font: 12px/1.5 "Gilroy", sans-serif;
-  color: #ccc;
+  color: #999;
   letter-spacing: 1px;
   margin-bottom: 60px;
   margin-top: 30px;
@@ -1810,8 +1813,7 @@ body.hidden-scroll {
 
 .author-list-title {
   background: #5072ff;
-  color: #111;
-  font-family: "Montserrat", sans-serif;
+  color: #fff;
   font-size: 12px;
   font-weight: bold;
   left: 50%;
@@ -2114,7 +2116,7 @@ body.hidden-scroll {
 
 .post-count,
 .page-header .author-links {
-  color: #ccc;
+  color: #999;
   margin-bottom: 15px;
 }
 
@@ -2498,7 +2500,7 @@ body.hidden-scroll {
 }
 
 .nav-date {
-  color: #ccc;
+  color: #999;
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -2559,7 +2561,7 @@ body.hidden-scroll {
 
 .widget-recent-posts li {
   border-bottom: 1px solid #eee;
-  color: #ccc;
+  color: #999;
   margin-bottom: 15px;
   padding-bottom: 15px;
   position: relative;
@@ -2710,7 +2712,7 @@ body.hidden-scroll {
 
 .offsite-links a {
   background-color: #252525;
-  color: #ccc;
+  color: #999;
   display: block;
   -webkit-flex: 0 0 40px;
   -ms-flex: 0 0 40px;
