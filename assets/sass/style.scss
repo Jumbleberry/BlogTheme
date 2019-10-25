@@ -604,8 +604,8 @@ body {
 }
 
 a {
-	border-bottom: 1px solid #111;
-	color: #111;
+	border-bottom: 1px solid $color-dark;
+	color: $color-dark;
 	text-decoration: none;
 	-webkit-transition: .3s;
 	transition: .3s;
@@ -613,7 +613,7 @@ a {
 
 a:hover {
 	border-color: $color-accent;
-	color: #111;
+	color: $color-dark;
 }
 
 h1,
@@ -622,7 +622,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #111;
+	color: $color-dark;
 	font-family: $heading-font;
 	font-weight: bold;
 	line-height: 1.2;
@@ -679,7 +679,7 @@ code {
 }
 
 pre {
-	background-color: #111;
+	background-color: $color-dark;
 	color: #999;
 	font-size: 16px;
 	margin: 0 0 30px;
@@ -696,7 +696,7 @@ pre code {
 blockquote {
 	border-bottom: 1px solid #eee;
 	border-top: 3px solid #eee;
-	color: #111;
+	color: $color-dark;
 	font-size: 24px;
 	font-weight: bold;
 	line-height: 1.5;
@@ -765,7 +765,7 @@ table {
 }
 
 caption {
-	color: #111;
+	color: $color-dark;
 	font-style: italic;
 	margin-bottom: 15px;
 	text-align: left;
@@ -778,7 +778,7 @@ td {
 }
 
 th {
-	color: #111;
+	color: $color-dark;
 	font-weight: bold;
 }
 
@@ -789,9 +789,9 @@ select,
 textarea {
 	background-color: #fff;
 	box-sizing: border-box;
-	border: 2px solid #111;
+	border: 1px solid $color-dark;
 	border-radius: 0;
-	color: #111;
+	color: $color-dark;
 	font-size: 16px;
 	font-weight: normal;
 	max-width: 100%;
@@ -824,7 +824,7 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-	background-color: #111;
+	background-color: $color-dark;
 	border: 0;
 	color: #fff;
 	font-family: $alt-font;
@@ -849,7 +849,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	background-color: $color-accent;
-	color: #111;
+	color: $color-dark;
 	outline: 0;
 }
 
@@ -1041,14 +1041,14 @@ video {
 
 /* Text selection */
 ::-moz-selection {
-	background: #fffac4;
-	color: #111;
+	background-color: #e3e7f8;
+    color: $color-accent;
 	text-shadow: none;
 }
 
 ::selection {
-	background: #fffac4;
-	color: #111;
+	background-color: #e3e7f8;
+    color: $color-accent;
 	text-shadow: none;
 }
 
@@ -1095,7 +1095,8 @@ pre .storage {
 
 /* Buttons */
 .button {
-	border: 2px solid #999;
+    border: 1px solid #999;
+    border-radius: 4px;
 	color: #666;
 	display: inline-block;
 	font: bold 12px/1.5 $alt-font;
@@ -1133,8 +1134,8 @@ input[type="button"].square {
 
 .button.dark,
 .square.dark {
-	border-color: #111;
-	color: #111;
+	border-color: $color-dark;
+	color: $color-dark;
 }
 
 .button:hover,
@@ -1186,7 +1187,7 @@ input[type="button"].square {
 }
 
 .icon-plus-custom {
-	color: #111;
+	color: $color-dark;
 	height: 30px;
 	position: relative;
 	width: 30px;
@@ -1226,8 +1227,8 @@ input[type="button"].square {
 
 .icon-nav-custom,
 .icon-close-custom {
-	background: #111;
-	color: #111;
+	background: $color-dark;
+	color: $color-dark;
 	height: 2px;
 	left: 50%;
 	margin-left: -15px;
@@ -1337,7 +1338,7 @@ input[type="button"].square {
 
 .sl-wrapper button {
 	background: transparent;
-	color: #111;
+	color: $color-dark;
 	cursor: pointer;
 	height: 30px;
 	line-height: 2.85714;
@@ -1351,7 +1352,7 @@ input[type="button"].square {
 }
 
 .sl-wrapper .sl-counter {
-	color: #111;
+	color: $color-dark;
 	font: normal 12px/1.5 $alt-font;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -1386,8 +1387,8 @@ input[type="button"].square {
  */
 .site-header {
 	background-color: #fff;
-	padding-bottom: 25px;
-	padding-top: 25px;
+	padding-bottom: 40px;
+	padding-top: 40px;
 }
 
 .site-header .inner-wide {
@@ -1419,17 +1420,17 @@ input[type="button"].square {
 .site-logo a,
 .site-title a {
 	border: 0;
-	color: #111;
+	color: $color-dark;
 }
 
 .site-logo img {
-	max-height: 50px;
+	max-height: 30px;
 }
 
 .sidebar-toggle,
 .search-toggle {
 	border: 0;
-	color: #111;
+	color: $color-dark;
 	cursor: pointer;
 	display: block;
 	height: 30px;
@@ -1472,7 +1473,7 @@ input[type="button"].square {
 
 .site-header .menu-item a {
 	border: 0;
-	color: #111;
+	color: $color-dark;
 	display: inline-block;
 	padding: 7px 15px;
 }
@@ -1567,7 +1568,7 @@ input[type="button"].square {
 .sidebar .widget-area,
 .search-box {
 	padding-bottom: 30px;
-	padding-top: 90px;
+	padding-top: 100px;
 }
 
 .sidebar .site-navigation,
@@ -1601,7 +1602,7 @@ input[type="button"].square {
 	left: 50%;
 	margin-left: -15px;
 	right: auto;
-	top: 25px;
+	top: 40px;
 }
 
 .search-form {
@@ -1626,7 +1627,7 @@ input[type="button"].square {
 }
 
 .result-title {
-	color: #111;
+	color: $color-dark;
 	font: bold 18px/1.5 $heading-font;
 	margin-bottom: 10px;
 }
@@ -1668,13 +1669,13 @@ input[type="button"].square {
 
 .tag-template .post-title a,
 .author-template .post-title a {
-	color: #111;
+	color: $color-dark;
 }
 
 .post-title a:hover,
 .tag-template .post-title a:hover,
 .author-template .post-title a:hover {
-	border-color: $color-accent;
+	border-color: #fff;
 }
 
 .post-tags {
@@ -1686,7 +1687,7 @@ input[type="button"].square {
 
 .post-tags a {
 	background-color: $color-accent;
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	color: #fff;
 	display: inline-block;
 	margin-bottom: 5px;
@@ -1704,16 +1705,21 @@ input[type="button"].square {
 .tag-template .post-tags a:hover,
 .author-template .post-tags a:hover {
 	background-color: transparent;
-	border-color: #111;
-	color: #111;
+	border-color: $color-dark;
+	color: $color-dark;
 }
 
 .post-meta {
-	color: #999;
+	color: #fefefe;
 	font: 12px/1.5 $alt-font;
 	letter-spacing: 1px;
 	margin-bottom: 30px;
 	text-transform: uppercase;
+}
+
+.tag-template .post-meta,
+.author-template .post-meta {
+    color: #999;
 }
 
 .post-meta .reading-time {
@@ -1724,7 +1730,8 @@ input[type="button"].square {
 
 .post-meta a {
 	border-color: transparent;
-	color: $color-dark;
+    color: $color-dark;
+    font-weight: 700;
 }
 
 .post-meta a:hover {
@@ -1740,7 +1747,7 @@ input[type="button"].square {
 .tag-template .post-meta a:hover,
 .author-template .post-meta a:hover {
 	border-color: $color-accent;
-	color: #111;
+	color: $color-dark;
 }
 
 .author-template .post-content,
@@ -1766,7 +1773,7 @@ input[type="button"].square {
 }
 
 .author-list {
-	border: 3px solid #111;
+	border: 3px solid $color-dark;
 	margin-bottom: 60px;
 	padding: 15px 30px;
 	position: relative;
@@ -1853,7 +1860,7 @@ input[type="button"].square {
 }
 
 .author-box .author-links {
-	color: #111;
+	color: $color-dark;
 	font-size: 10px;
 	margin-bottom: 0;
 }
@@ -1924,7 +1931,7 @@ input[type="button"].square {
 }
 
 .post-inside {
-	background-color: #111;
+	background-color: #333;
 	height: 100%;
 	position: relative;
 	width: 100%;
@@ -1954,7 +1961,7 @@ input[type="button"].square {
 }
 
 .cover {
-	background-color: #111;
+	background-color: $color-dark;
 	color: #fff;
 	display: table;
 	height: 100vh;
@@ -1980,7 +1987,7 @@ input[type="button"].square {
 	background-size: cover;
 	bottom: 0;
 	left: 0;
-	opacity: 0.4;
+	opacity: 0.8;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -2134,7 +2141,7 @@ input[type="button"].square {
 .slick-arrow {
 	background-color: $color-accent;
 	border-color: transparent;
-	color: #111;
+	color: $color-dark;
 	margin-top: -20px;
 	position: absolute;
 	top: 50%;
@@ -2169,7 +2176,7 @@ input[type="button"].square {
 }
 
 .featured-slider {
-	background-color: #111;
+	background-color: $color-dark;
 	display: none;
 }
 
@@ -2252,7 +2259,7 @@ input[type="button"].square {
  * ----------------------------------------------------------------------------
  */
 .pagination {
-	color: #111;
+	color: $color-dark;
 	font: 12px/1.5 $alt-font;
 	letter-spacing: 1px;
 	margin-bottom: 90px;
@@ -2282,7 +2289,7 @@ input[type="button"].square {
  * ----------------------------------------------------------------------------
  */
 .post-navigation {
-	background-color: #111;
+	background-color: $color-dark;
 	font-family: $alt-font;
 	overflow: hidden;
 }
@@ -2447,7 +2454,7 @@ input[type="button"].square {
 }
 
 .recent-title {
-	color: #111;
+	color: $color-dark;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -2458,7 +2465,7 @@ input[type="button"].square {
 
 .recent-title a:hover {
 	border-color: $color-accent;
-	color: #111;
+	color: $color-dark;
 }
 
 .recent-date {
@@ -2527,8 +2534,8 @@ input[type="button"].square {
 
 .widget-tags a {
 	background-color: transparent;
-	border: 2px solid #111;
-	color: #111;
+	border: 1px solid $color-dark;
+	color: $color-dark;
 	display: inline-block;
 	font: bold 12px/1.5 $alt-font;
 	letter-spacing: 1px;
@@ -2540,7 +2547,7 @@ input[type="button"].square {
 .widget-tags a:hover {
 	background-color: $color-accent;
 	border-color: $color-accent;
-	color: #111;
+	color: #fff;
 }
 
 .contacts {
@@ -2553,7 +2560,7 @@ input[type="button"].square {
 }
 
 .contacts .icon {
-	color: #111;
+	color: $color-dark;
 	display: inline-block;
 	font-size: 14px;
 	line-height: 2;
@@ -2566,11 +2573,10 @@ input[type="button"].square {
  * ----------------------------------------------------------------------------
  */
 .site-footer {
-	background-color: #111;
+	background-color: $color-accent;
 }
 
 .footer-top {
-	border-bottom: 1px solid #252525;
 	padding-bottom: 60px;
 	padding-top: 60px;
 }
@@ -2590,8 +2596,8 @@ input[type="button"].square {
 }
 
 .offsite-links a {
-	background-color: #252525;
-	color: #999;
+	background-color: #fff;
+	color: $color-dark;
 	display: block;
 	-webkit-flex: 0 0 40px;
 	-ms-flex: 0 0 40px;
@@ -2604,8 +2610,7 @@ input[type="button"].square {
 }
 
 .offsite-links a:hover {
-	background-color: $color-accent;
-	color: #111;
+	color: #000;
 }
 
 .offsite-links [class^="icon-"],
@@ -2614,22 +2619,22 @@ input[type="button"].square {
 }
 
 .footer-top .top-link {
-	background-color: $color-accent;
-	border-color: transparent;
-	color: #111;
+	background-color: transparent;
+	border-color: #fff;
+	color: #fff;
 	position: absolute;
 	right: 30px;
 	top: 0;
 }
 
 .footer-top .top-link:hover {
-	background-color: transparent;
-	border-color: #fff;
+	background-color: #162765;
+	border-color: #162765;
 	color: #fff;
 }
 
 .site-info {
-	color: #666;
+	color: #fefefe;
 	font: 10px/1.5 $alt-font;
 	letter-spacing: 1px;
 	padding-bottom: 30px;
@@ -2640,7 +2645,7 @@ input[type="button"].square {
 
 .site-info a {
 	border-color: transparent;
-	color: $color-accent;
+	color: #fff;
 }
 
 .site-info a:hover {
@@ -2666,18 +2671,18 @@ input[type="button"].square {
 		width: 30px;
 	}
 	.sl-wrapper .sl-next {
-		border: 2px solid #111;
+		border: 1px solid $color-dark;
 		right: 10px;
 	}
 	.sl-wrapper .sl-prev {
-		border: 2px solid #111;
+		border: 1px solid $color-dark;
 		left: 10px;
 	}
 	.sl-wrapper .sl-next:hover,
 	.sl-wrapper .sl-prev:hover {
 		background-color: $color-accent;
 		border-color: $color-accent;
-		color: #111;
+		color: $color-dark;
 	}
 }
 

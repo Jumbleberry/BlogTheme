@@ -524,8 +524,8 @@ body {
 }
 
 a {
-  border-bottom: 1px solid #111;
-  color: #111;
+  border-bottom: 1px solid #162765;
+  color: #162765;
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -533,7 +533,7 @@ a {
 
 a:hover {
   border-color: #5072ff;
-  color: #111;
+  color: #162765;
 }
 
 h1,
@@ -542,7 +542,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #111;
+  color: #162765;
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   line-height: 1.2;
@@ -599,7 +599,7 @@ code {
 }
 
 pre {
-  background-color: #111;
+  background-color: #162765;
   color: #999;
   font-size: 16px;
   margin: 0 0 30px;
@@ -616,7 +616,7 @@ pre code {
 blockquote {
   border-bottom: 1px solid #eee;
   border-top: 3px solid #eee;
-  color: #111;
+  color: #162765;
   font-size: 24px;
   font-weight: bold;
   line-height: 1.5;
@@ -685,7 +685,7 @@ table {
 }
 
 caption {
-  color: #111;
+  color: #162765;
   font-style: italic;
   margin-bottom: 15px;
   text-align: left;
@@ -698,7 +698,7 @@ td {
 }
 
 th {
-  color: #111;
+  color: #162765;
   font-weight: bold;
 }
 
@@ -709,9 +709,9 @@ select,
 textarea {
   background-color: #fff;
   box-sizing: border-box;
-  border: 2px solid #111;
+  border: 1px solid #162765;
   border-radius: 0;
-  color: #111;
+  color: #162765;
   font-size: 16px;
   font-weight: normal;
   max-width: 100%;
@@ -744,7 +744,7 @@ button,
 input[type=submit],
 input[type=button],
 input[type=reset] {
-  background-color: #111;
+  background-color: #162765;
   border: 0;
   color: #fff;
   font-family: "Gilroy", sans-serif;
@@ -769,7 +769,7 @@ input[type=button]:active,
 input[type=reset]:active,
 input[type=submit]:active {
   background-color: #5072ff;
-  color: #111;
+  color: #162765;
   outline: 0;
 }
 
@@ -961,14 +961,14 @@ video {
 
 /* Text selection */
 ::-moz-selection {
-  background: #fffac4;
-  color: #111;
+  background-color: #e3e7f8;
+  color: #5072ff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fffac4;
-  color: #111;
+  background-color: #e3e7f8;
+  color: #5072ff;
   text-shadow: none;
 }
 
@@ -1015,7 +1015,8 @@ pre .storage {
 
 /* Buttons */
 .button {
-  border: 2px solid #999;
+  border: 1px solid #999;
+  border-radius: 4px;
   color: #666;
   display: inline-block;
   font: bold 12px/1.5 "Gilroy", sans-serif;
@@ -1053,8 +1054,8 @@ input[type=button].square {
 
 .button.dark,
 .square.dark {
-  border-color: #111;
-  color: #111;
+  border-color: #162765;
+  color: #162765;
 }
 
 .button:hover,
@@ -1106,7 +1107,7 @@ input[type=button].square {
 }
 
 .icon-plus-custom {
-  color: #111;
+  color: #162765;
   height: 30px;
   position: relative;
   width: 30px;
@@ -1146,8 +1147,8 @@ input[type=button].square {
 
 .icon-nav-custom,
 .icon-close-custom {
-  background: #111;
-  color: #111;
+  background: #162765;
+  color: #162765;
   height: 2px;
   left: 50%;
   margin-left: -15px;
@@ -1379,7 +1380,7 @@ body.hidden-scroll {
 }
 .sl-wrapper button {
   background: transparent;
-  color: #111;
+  color: #162765;
   cursor: pointer;
   height: 30px;
   line-height: 2.85714;
@@ -1393,7 +1394,7 @@ body.hidden-scroll {
 }
 
 .sl-wrapper .sl-counter {
-  color: #111;
+  color: #162765;
   font: normal 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1428,8 +1429,8 @@ body.hidden-scroll {
  */
 .site-header {
   background-color: #fff;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .site-header .inner-wide {
@@ -1461,17 +1462,17 @@ body.hidden-scroll {
 .site-logo a,
 .site-title a {
   border: 0;
-  color: #111;
+  color: #162765;
 }
 
 .site-logo img {
-  max-height: 50px;
+  max-height: 30px;
 }
 
 .sidebar-toggle,
 .search-toggle {
   border: 0;
-  color: #111;
+  color: #162765;
   cursor: pointer;
   display: block;
   height: 30px;
@@ -1514,7 +1515,7 @@ body.hidden-scroll {
 
 .site-header .menu-item a {
   border: 0;
-  color: #111;
+  color: #162765;
   display: inline-block;
   padding: 7px 15px;
 }
@@ -1606,7 +1607,7 @@ body.hidden-scroll {
 .sidebar .widget-area,
 .search-box {
   padding-bottom: 30px;
-  padding-top: 90px;
+  padding-top: 100px;
 }
 
 .sidebar .site-navigation,
@@ -1640,7 +1641,7 @@ body.hidden-scroll {
   left: 50%;
   margin-left: -15px;
   right: auto;
-  top: 25px;
+  top: 40px;
 }
 
 .search-form {
@@ -1665,7 +1666,7 @@ body.hidden-scroll {
 }
 
 .result-title {
-  color: #111;
+  color: #162765;
   font: bold 18px/1.5 "Gilroy", sans-serif;
   margin-bottom: 10px;
 }
@@ -1707,13 +1708,13 @@ body.hidden-scroll {
 
 .tag-template .post-title a,
 .author-template .post-title a {
-  color: #111;
+  color: #162765;
 }
 
 .post-title a:hover,
 .tag-template .post-title a:hover,
 .author-template .post-title a:hover {
-  border-color: #5072ff;
+  border-color: #fff;
 }
 
 .post-tags {
@@ -1725,7 +1726,7 @@ body.hidden-scroll {
 
 .post-tags a {
   background-color: #5072ff;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   color: #fff;
   display: inline-block;
   margin-bottom: 5px;
@@ -1743,16 +1744,21 @@ body.hidden-scroll {
 .tag-template .post-tags a:hover,
 .author-template .post-tags a:hover {
   background-color: transparent;
-  border-color: #111;
-  color: #111;
+  border-color: #162765;
+  color: #162765;
 }
 
 .post-meta {
-  color: #999;
+  color: #fefefe;
   font: 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-transform: uppercase;
+}
+
+.tag-template .post-meta,
+.author-template .post-meta {
+  color: #999;
 }
 
 .post-meta .reading-time {
@@ -1764,6 +1770,7 @@ body.hidden-scroll {
 .post-meta a {
   border-color: transparent;
   color: #162765;
+  font-weight: 700;
 }
 
 .post-meta a:hover {
@@ -1779,7 +1786,7 @@ body.hidden-scroll {
 .tag-template .post-meta a:hover,
 .author-template .post-meta a:hover {
   border-color: #5072ff;
-  color: #111;
+  color: #162765;
 }
 
 .author-template .post-content,
@@ -1805,7 +1812,7 @@ body.hidden-scroll {
 }
 
 .author-list {
-  border: 3px solid #111;
+  border: 3px solid #162765;
   margin-bottom: 60px;
   padding: 15px 30px;
   position: relative;
@@ -1892,7 +1899,7 @@ body.hidden-scroll {
 }
 
 .author-box .author-links {
-  color: #111;
+  color: #162765;
   font-size: 10px;
   margin-bottom: 0;
 }
@@ -1963,7 +1970,7 @@ body.hidden-scroll {
 }
 
 .post-inside {
-  background-color: #111;
+  background-color: #333;
   height: 100%;
   position: relative;
   width: 100%;
@@ -1993,7 +2000,7 @@ body.hidden-scroll {
 }
 
 .cover {
-  background-color: #111;
+  background-color: #162765;
   color: #fff;
   display: table;
   height: 100vh;
@@ -2019,7 +2026,7 @@ body.hidden-scroll {
   background-size: cover;
   bottom: 0;
   left: 0;
-  opacity: 0.4;
+  opacity: 0.8;
   position: absolute;
   right: 0;
   top: 0;
@@ -2255,7 +2262,7 @@ body.hidden-scroll {
 .slick-arrow {
   background-color: #5072ff;
   border-color: transparent;
-  color: #111;
+  color: #162765;
   margin-top: -20px;
   position: absolute;
   top: 50%;
@@ -2290,7 +2297,7 @@ body.hidden-scroll {
 }
 
 .featured-slider {
-  background-color: #111;
+  background-color: #162765;
   display: none;
 }
 
@@ -2373,7 +2380,7 @@ body.hidden-scroll {
  * ----------------------------------------------------------------------------
  */
 .pagination {
-  color: #111;
+  color: #162765;
   font: 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 90px;
@@ -2403,7 +2410,7 @@ body.hidden-scroll {
  * ----------------------------------------------------------------------------
  */
 .post-navigation {
-  background-color: #111;
+  background-color: #162765;
   font-family: "Gilroy", sans-serif;
   overflow: hidden;
 }
@@ -2568,7 +2575,7 @@ body.hidden-scroll {
 }
 
 .recent-title {
-  color: #111;
+  color: #162765;
   font-size: 16px;
   font-weight: bold;
 }
@@ -2579,7 +2586,7 @@ body.hidden-scroll {
 
 .recent-title a:hover {
   border-color: #5072ff;
-  color: #111;
+  color: #162765;
 }
 
 .recent-date {
@@ -2648,8 +2655,8 @@ body.hidden-scroll {
 
 .widget-tags a {
   background-color: transparent;
-  border: 2px solid #111;
-  color: #111;
+  border: 1px solid #162765;
+  color: #162765;
   display: inline-block;
   font: bold 12px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
@@ -2661,7 +2668,7 @@ body.hidden-scroll {
 .widget-tags a:hover {
   background-color: #5072ff;
   border-color: #5072ff;
-  color: #111;
+  color: #fff;
 }
 
 .contacts {
@@ -2674,7 +2681,7 @@ body.hidden-scroll {
 }
 
 .contacts .icon {
-  color: #111;
+  color: #162765;
   display: inline-block;
   font-size: 14px;
   line-height: 2;
@@ -2687,11 +2694,10 @@ body.hidden-scroll {
  * ----------------------------------------------------------------------------
  */
 .site-footer {
-  background-color: #111;
+  background-color: #5072ff;
 }
 
 .footer-top {
-  border-bottom: 1px solid #252525;
   padding-bottom: 60px;
   padding-top: 60px;
 }
@@ -2711,8 +2717,8 @@ body.hidden-scroll {
 }
 
 .offsite-links a {
-  background-color: #252525;
-  color: #999;
+  background-color: #fff;
+  color: #162765;
   display: block;
   -webkit-flex: 0 0 40px;
   -ms-flex: 0 0 40px;
@@ -2725,8 +2731,7 @@ body.hidden-scroll {
 }
 
 .offsite-links a:hover {
-  background-color: #5072ff;
-  color: #111;
+  color: #000;
 }
 
 .offsite-links [class^=icon-],
@@ -2735,22 +2740,22 @@ body.hidden-scroll {
 }
 
 .footer-top .top-link {
-  background-color: #5072ff;
-  border-color: transparent;
-  color: #111;
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
   position: absolute;
   right: 30px;
   top: 0;
 }
 
 .footer-top .top-link:hover {
-  background-color: transparent;
-  border-color: #fff;
+  background-color: #162765;
+  border-color: #162765;
   color: #fff;
 }
 
 .site-info {
-  color: #666;
+  color: #fefefe;
   font: 10px/1.5 "Gilroy", sans-serif;
   letter-spacing: 1px;
   padding-bottom: 30px;
@@ -2761,7 +2766,7 @@ body.hidden-scroll {
 
 .site-info a {
   border-color: transparent;
-  color: #5072ff;
+  color: #fff;
 }
 
 .site-info a:hover {
@@ -2790,12 +2795,12 @@ body.hidden-scroll {
   }
 
   .sl-wrapper .sl-next {
-    border: 2px solid #111;
+    border: 1px solid #162765;
     right: 10px;
   }
 
   .sl-wrapper .sl-prev {
-    border: 2px solid #111;
+    border: 1px solid #162765;
     left: 10px;
   }
 
@@ -2803,7 +2808,7 @@ body.hidden-scroll {
 .sl-wrapper .sl-prev:hover {
     background-color: #5072ff;
     border-color: #5072ff;
-    color: #111;
+    color: #162765;
   }
 }
 @media only screen and (min-width: 801px) {
