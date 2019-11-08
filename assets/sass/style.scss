@@ -1369,7 +1369,7 @@ input[type="button"].square {
 
 .inner-wide {
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 1273px;
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -1387,12 +1387,15 @@ input[type="button"].square {
  */
 .site-header {
 	background-color: #fff;
-	padding-bottom: 40px;
-	padding-top: 40px;
+	padding-bottom: 0.8rem;
+	padding-top: 1rem;
 }
 
 .site-header .inner-wide {
-	position: relative;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 .post-template .site-header,
@@ -1424,8 +1427,8 @@ input[type="button"].square {
 }
 
 .site-logo img {
-    max-height: 34px;
-    margin-top: -2px;
+    max-height: 33px;
+    margin-top: 2px;
 }
 
 .sidebar-toggle,
@@ -1460,7 +1463,6 @@ input[type="button"].square {
 
 .site-navigation .menu-item {
 	font: 12px/1.5 $alt-font;
-	text-transform: uppercase;
 }
 
 .site-header .site-navigation {
@@ -1474,7 +1476,7 @@ input[type="button"].square {
 
 .site-header .menu-item a {
 	border: 0;
-    color: $color-dark;
+    color: #303030;
     font-size: 18px;
 	display: inline-block;
     padding: 7px 15px;
@@ -2952,6 +2954,13 @@ input[type="button"].square {
 }
 
 @media only screen and (max-width: 1200px) {
+    .site-header .inner-wide {
+        position: relative;
+        padding-left: 45px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
 	.author-template .post-grid,
 	.tag-template .post-grid {
 		margin-left: -30px;
