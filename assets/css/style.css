@@ -1466,7 +1466,8 @@ body.hidden-scroll {
 }
 
 .site-logo img {
-  max-height: 30px;
+  max-height: 34px;
+  margin-top: -2px;
 }
 
 .sidebar-toggle,
