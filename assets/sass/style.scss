@@ -1452,7 +1452,7 @@ input[type="button"].square {
  * ----------------------------------------------------------------------------
  */
 .site-navigation .menu {
-	list-style: none;
+    list-style: none;
 	margin-bottom: 0;
 	padding-left: 0;
 }
@@ -1473,13 +1473,20 @@ input[type="button"].square {
 
 .site-header .menu-item a {
 	border: 0;
-	color: $color-dark;
+    color: $color-dark;
+    font-size: 18px;
 	display: inline-block;
-	padding: 7px 15px;
+    padding: 7px 15px;
+    line-height: 24px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-weight: 800;
+    text-align: center;
 }
 
 .site-header .menu-item a:hover {
-    background-color: $color-accent;
+    background-color: #00acb9;
     color: #fff;
 }
 
@@ -2139,7 +2146,7 @@ input[type="button"].square {
 .slick-arrow.slick-hidden{display:none}
 
 .slick-arrow {
-	background-color: $color-accent;
+	background-color: #fff;
 	border-color: transparent;
 	color: $color-dark;
 	margin-top: -20px;

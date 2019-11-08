@@ -1516,12 +1516,19 @@ body.hidden-scroll {
 .site-header .menu-item a {
   border: 0;
   color: #162765;
+  font-size: 18px;
   display: inline-block;
   padding: 7px 15px;
+  line-height: 24px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-weight: 800;
+  text-align: center;
 }
 
 .site-header .menu-item a:hover {
-  background-color: #5072ff;
+  background-color: #00acb9;
   color: #fff;
 }
 
@@ -2260,7 +2267,7 @@ body.hidden-scroll {
 }
 
 .slick-arrow {
-  background-color: #5072ff;
+  background-color: #fff;
   border-color: transparent;
   color: #162765;
   margin-top: -20px;
