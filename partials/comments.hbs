@@ -2,16 +2,4 @@
 	<h2 class="comments-title"><span class="icon-plus-custom" aria-hidden="true"></span> Comments</h2>
 	<div id="disqus_thread"></div>
 	<div id="disqus_thread"></div>
-	<script>
-		var disqus_config = function () {
-			this.page.url = "{{url absolute="true"}}";  
-			this.page.identifier = "ghost-{{comment_id}}"
-		};
-		(function() {
-		var d = document, s = d.createElement('script');
-		s.src = 'https://jumbleberry.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
-	</script>	
 </section><!-- .comments-area -->
