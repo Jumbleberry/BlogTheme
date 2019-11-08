@@ -1542,7 +1542,8 @@ body.hidden-scroll {
   width: auto;
 }
 
-.post-content a[href^="https://partners.jumbleberry.com/signup"] {
+a.sign-up {
+  float: right;
   background-color: #5072ff;
   border-bottom-color: white;
   box-sizing: border-box;

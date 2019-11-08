@@ -1500,7 +1500,8 @@ input[type="button"].square {
 	width: auto;
 }
 
-.post-content a[href^="https://partners.jumbleberry.com/signup"] {
+a.sign-up {
+    float: right;
     background-color: rgb(80, 114, 255);
     border-bottom-color: rgb(255, 255, 255);
     box-sizing: border-box;
