@@ -1391,8 +1391,9 @@ blockquote,
 .inner-wide {
   margin: 0 auto;
   max-width: 1273px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 .inner-wide .inner {
   padding-left: 0;
@@ -1456,7 +1457,7 @@ blockquote,
 }
 .site-logo img {
   max-height: 33px;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .site-title {
@@ -1563,6 +1564,10 @@ blockquote,
   }
 }
 @media only screen and (max-width: 860px) {
+  .site-header {
+    padding: 0.5rem;
+  }
+
   .post-template .site-header {
     position: static;
     width: auto;
@@ -1818,6 +1823,8 @@ blockquote,
 }
 .post-meta .post-author a {
   color: #162765;
+  text-shadow: 0px 0px 30px #999;
+  font-weight: 800;
 }
 .post-meta .post-author a:hover {
   color: #000;
@@ -1869,7 +1876,7 @@ blockquote,
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  width: 150px;
+  width: 200px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -2209,7 +2216,7 @@ blockquote,
 #featured-slider .slick-arrow {
   background-color: #5072ff;
   border-color: #5072ff;
-  color: #162765;
+  color: #fff;
   cursor: pointer;
   height: 40px;
   padding: 0;
@@ -2708,6 +2715,8 @@ blockquote,
   margin-bottom: 15px;
   position: relative;
   text-transform: uppercase;
+  font-weight: 800;
+  text-shadow: 0px 0px 30px #999;
 }
 
 .nav-title {

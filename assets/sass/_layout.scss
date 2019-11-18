@@ -22,8 +22,9 @@
 .inner-wide {
   margin: 0 auto;
   max-width: 1273px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
 
   .inner {
     padding-left: 0;
