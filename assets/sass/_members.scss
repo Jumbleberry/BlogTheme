@@ -199,6 +199,10 @@ form[data-members-form] {
 
 .widget,
 .subscribe-box {
+  button[type="submit"] {
+    height: 40px;
+  }
+
   form[data-members-form] {
     .message-signup-success,
     .message-signin-success {

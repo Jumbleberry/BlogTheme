@@ -1865,6 +1865,7 @@ blockquote,
   cursor: pointer;
   display: block !important;
   height: 40px;
+  border-radius: 4px;
   font-family: Gilroy, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -2578,6 +2579,7 @@ blockquote,
 
 .comments-title .icon-plus {
   background: #5072ff;
+  border-radius: 4px;
   color: #fff;
   left: 0;
   margin-top: -15px;
@@ -3342,6 +3344,10 @@ form[data-members-form].success.signin-form .message-signin-success {
   display: none;
 }
 
+.widget button[type=submit],
+.subscribe-box button[type=submit] {
+  height: 40px;
+}
 .widget form[data-members-form] .message-signup-success,
 .widget form[data-members-form] .message-signin-success,
 .subscribe-box form[data-members-form] .message-signup-success,
