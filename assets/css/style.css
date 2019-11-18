@@ -1418,8 +1418,8 @@ blockquote,
  */
 .site-header {
   background: #fff;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .post-template .site-header {
