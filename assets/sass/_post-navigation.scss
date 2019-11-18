@@ -1,0 +1,140 @@
+/**
+ * 6.4 Pagination
+ */
+.post-navigation {
+  background-color: $gray-darkest;
+  font-family: $font-secondary;
+  overflow: hidden;
+}
+
+.nav-bg {
+  background-position: center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: .4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(1,1);
+  transform: scale(1,1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.nav-previous,
+.nav-next {
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 300px;
+  position: relative;
+  width: 50%;
+
+  &:only-child {
+    text-align: center;
+    width: 100%;
+  }
+
+  &:hover {
+    color: #fff;
+
+    .nav-bg {
+      -webkit-transform: scale(1.05, 1.05);
+      transform: scale(1.05, 1.05);
+    }
+  }
+}
+
+.nav-previous {
+  float: right;
+  text-align: right;
+}
+
+.nav-next {
+  float: left;
+  text-align: left;
+}
+
+.nav-next + .nav-previous {
+  border-left: 1px solid $gray-darker;
+}
+
+.nav-inside {
+  bottom: 30px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+  right: 30px;
+  top: 90px;
+}
+
+.nav-before {
+  color: $gray-darkest;
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-title {
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.nav-date {
+  color: $gray-light;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1401px) {
+  .nav-previous,
+  .nav-next {
+    padding-bottom: 450px;
+  }
+
+  .nav-title {
+    font-size: 30px;
+  }
+
+  .nav-before {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .nav-inside {
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-previous,
+  .nav-next {
+    float: none;
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-next + .nav-previous {
+    border-left: 0;
+    border-top: 1px solid $gray-darker;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .nav-inside {
+    left: 15px;
+    right: 15px;
+  }
+}

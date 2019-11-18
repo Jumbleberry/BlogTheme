@@ -1,22 +1,22 @@
 {
-  "name": "Jumbleberry",
-  "description": "Jumbleberry's Ghost Theme",
-  "version": "1.0.0",
-  "engines": {
-    "ghost": ">=2.28.0",
-    "ghost-api": "v2"
-  },
-  "author": {
-    "name": "Ian Elliott",
-    "email": "ian@jumbleberry.com",
-    "url": "https://jumbleberry.com"
-  },
-  "keywords": [
-    "ghost",
-    "theme",
-    "ghost-theme"
-  ],
-  "config": {
-    "posts_per_page": 6
-  }
+    "name": "Jumbleberry",
+    "description": "Jumbleberry's Ghost Theme",
+    "version": "2.0.0",
+    "engines": {
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
+    },
+    "author": {
+        "name": "Ian Elliott",
+        "email": "ian@jumbleberry.com",
+        "url": "https://jumbleberry.com"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 6
+    }
 }

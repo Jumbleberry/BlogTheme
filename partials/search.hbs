@@ -1,17 +1,17 @@
 <section class="site-search" role="search">
 	<div class="search-scrollable">
+		<button id="search-hide" class="search-toggle"><span class="screen-reader-text">{{t "Close Search"}}</span><span aria-hidden="true" class="icon-close"></span></button>
 		<div class="search-box">
 			<div class="search-box-inside">
-				<h2 class="screen-reader-text">Search {{@site.title}}</h2>
+				<h2 class="screen-reader-text">{{t "Search {sitetitle}" sitetitle=@site.title}}</h2>
 				<form class="search-form">
-					<label class="screen-reader-text">Search for:</label>
-					<input type="text" id="search-field" class="search-field" placeholder="Type your keywords&hellip;" />
-					<input type="submit" class="search-submit screen-reader-text" value="Search" />
+					<label class="screen-reader-text">{{t "Search for:"}}</label>
+					<input type="text" id="search-field" class="search-field" placeholder="{{{t "Type your keywords&hellip;"}}}" />
+					<input type="submit" class="search-submit screen-reader-text" value="{{t "Search"}}" />
 				</form>
-				<div class="results-info">Posts found: <span class="results-count">0</span></div>
+				<div class="results-info">{{t "Posts found:"}} <span class="results-count">0</span></div>
 				<div id="search-results" class="search-results"></div>
 			</div><!-- .search-box-inside -->
 		</div><!-- .search-box -->
-		<a class="search-toggle" href="#"><span class="screen-reader-text">Close</span><span aria-hidden="true" class="icon-close-custom"></span></a>
 	</div><!-- .search-scrollable -->
 </section><!-- .site-search -->

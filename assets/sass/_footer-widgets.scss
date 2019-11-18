@@ -1,0 +1,77 @@
+/**
+ * 8. Footer Widget Area
+ */
+.footer-widgets {
+  border-top: 1px solid $gray-lighter;
+
+  .widget-area {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+}
+
+.footer-col {
+  border-right: 1px solid $gray-lighter;
+  box-sizing: border-box;
+  -ms-flex: 0 0 33.333%;
+  -webkit-flex: 0 0 33.333%;
+  flex: 0 0 33.333%;
+  padding: 60px 60px 30px;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &:only-child {
+    -ms-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  &:first-child:nth-last-child(2) {
+    -ms-flex: 0 0 66.666%;
+    -webkit-flex: 0 0 66.666%;
+    flex: 0 0 66.666%;
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .footer-col {
+    padding-bottom: 60px;
+    padding-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer-col {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .footer-widgets {
+    padding-top: 60px;
+
+    .widget-area {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .footer-col {
+      border: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

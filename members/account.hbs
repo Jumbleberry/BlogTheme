@@ -1,0 +1,42 @@
+{{!< ../default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The content area on the blog page --}}
+<main class="site-main">
+	<div class="site-content site-account inner">
+
+		{{#if @member}}
+
+		{{!-- Logged in, paying member: Show account info --}}
+		<header class="page-header">
+			<h1 class="page-title">{{t "Account Details"}}</h1>
+			<p class="page-description">{{{t "You have an active {sitetitle} account with access to all areas. You're all set, but if you need any help, get in touch with us and we'd be happy to help." sitetitle=@site.title}}}</p>
+		</header><!-- .page-header -->
+
+		{{else if @member}}
+
+		{{!-- Logged in, not paying: Link to checkout --}}
+		<header class="page-header">
+			<h1 class="page-title">{{t "Account Details"}}</h1>
+			<p class="page-description">{{{t "Currently, you're subscribed to free updates from {sitetitle}, but don't have a paid subscription to unlock full access. Upgrade your account and get access to all areas." sitetitle=@site.title}}}</p>
+		</header><!-- .page-header -->
+
+		<div class="page-content">
+			<div class="membership-box">
+				<h2 class="membership-box-title">{{t "Choose your subscription"}}</h2>
+				<div class="membership-plans">
+					{{> "membership-monthly"}}
+					{{> "membership-yearly"}}
+				</div><!-- membership-plans -->
+			</div><!-- membership-box -->
+		</div><!-- .page-content -->
+
+		{{else}}
+
+		{{!-- Not logged in: Redirect to signin --}}
+		<script>window.location = '{{@site.url}}/signin/';</script>
+
+		{{/if}}
+
+	</div><!-- .site-content -->
+</main><!-- .site-main -->

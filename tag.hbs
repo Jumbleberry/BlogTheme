@@ -6,16 +6,16 @@
 	<div class="site-content">
 
 		{{#tag}}
-		<header class="cover page-header">
+		<header class="cover archive-header">
 			{{#if feature_image}}
 			<div class="cover-bg" style="background-image: url({{feature_image}})"></div>
 			{{/if}}
 			<div class="cover-content">
 				<div class="inner">
-					<div class="post-count">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} tagged</div>
-					<h1 class="page-title">{{name}}</h1>
+					<div class="archive-meta">{{plural ../pagination.total empty=(t "No posts tagged") singular=(t "% post tagged") plural=(t "% posts tagged")}}</div>
+					<h1 class="archive-title">{{name}}</h1>
 					{{#if description}}
-					<p class="page-description">{{description}}</p>
+					<p class="archive-description">{{description}}</p>
 					{{/if}}
 				</div><!-- .inner -->
 			</div><!-- .cover-content -->

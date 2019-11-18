@@ -1,9 +1,14 @@
 // Typography
-$base-font: 'Gilroy', serif;
-$alt-font: 'Gilroy', sans-serif;
-$heading-font: $alt-font;
+$font-primary: gilroy,sans-serif;
+$font-secondary: gilroy,sans-serif;
 
 // Colors
+$color-accent-hover: #4561ff;
 $color-accent: #5072ff;
-$color-accent-light: #4561ff;
-$color-dark: #162765;
+$gray-darkest: #162765;
+$gray-darker:  #252525;
+$gray:         #999;
+$gray-light:   #ccc;
+$gray-lighter: #efefef;
+$yellow-pale:  #e3e7f8;
+$red:          #00acb9;

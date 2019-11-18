@@ -1,0 +1,10 @@
+{{!-- Widget to display a subscribe form --}}
+{{#if @labs.members}}
+{{#unless @member}}
+<section class="widget widget-subscribe">
+	<h2 class="widget-title">{{t "Subscribe to {sitetitle}" sitetitle=@site.title}}</h2>
+	<p>{{t "Subscribe today and get access to a private newsletter and new content every week!"}}</p>
+	{{> "member-subscribe-form"}}
+</section><!-- .widget -->
+{{/unless}}
+{{/if}}

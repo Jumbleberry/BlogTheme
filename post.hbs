@@ -1,13 +1,14 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{!-- Everything inside the #post tags pulls data from the post --}}
-{{#post}}
 <main class="site-main">
 	<div class="site-content">
 
+		{{!-- Everything inside the #post tags pulls data from the post --}}
+		{{#post}}
+
 		<article class="{{post_class}}">
-			<header class="cover post-header">
+			<header class="cover full-height post-header">
 				{{#if feature_image}}
 				<div class="cover-bg" style="background-image: url({{feature_image}})"></div>
 				{{/if}}
@@ -20,66 +21,113 @@
 						{{/if}}
 						<h1 class="post-title">{{title}}</h1>
 						<div class="post-meta">
-							by <span class="post-author">{{authors}}</span> on <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time> <span class="reading-time">{{reading_time minute="Read in 1 min" minutes="Read in % min"}}</span>
+							by <span class="post-author">{{authors}}</span> on <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="LL"}}</time> <span class="reading-time">{{reading_time minute=(t "Read in 1 min") minutes=(t "Read in % min")}}</span>
 						</div><!-- .post-meta -->
-						<a href="#" class="scroll-down square light"><span class="icon-down-custom" aria-hidden="true"></span><span class="screen-reader-text">Scroll Down</span></a>
+						<a href="#" class="scroll-down square white"><span class="icon-angle-down" aria-hidden="true"></span><span class="screen-reader-text">{{t "Scroll Down"}}</span>
+						</a>
 					</div><!-- .inner -->
 				</div><!-- .cover-content -->
 			</header><!-- .cover -->
+
+			{{!-- If the user has access, show post content --}}
+			{{#if access}}
+
 			<div class="post-content inner">
 				{{content}}
 			</div><!-- .post-content -->
 			<footer class="post-footer inner">
+				<a class="sign-up" href="https://partners.jumbleberry.com/signup" target="_blank">Sign Up</a>
 				<div class="share-post">
-					<span>Share</span>
-					<a class="square" target="_blank" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"><i class="icon-twitter" aria-hidden="true"></i><span class="screen-reader-text">Share on Twitter</span></a>
-					<a class="square" target="_blank" href="https://www.facebook.com/sharer.php?u={{url absolute="true"}}"><i class="icon-facebook" aria-hidden="true"></i><span class="screen-reader-text">Share on Facebook</span></a>
-					<a class="square" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}&amp;source={{encode @site.title}}"><i class="icon-linkedin" aria-hidden="true"></i><span class="screen-reader-text">Share on LinkedIn</span></a>
-                    <a class="sign-up" href="https://partners.jumbleberry.com/signup" target="_blank">Sign Up</a>
+					<span>{{t "Share"}}</span>
+					<a class="square light" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+					<a class="square light" href="https://www.facebook.com/sharer.php?u={{url absolute="true"}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+					<a class="square light" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}&amp;source={{encode @site.title}}" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
 				</div><!-- .share-post -->
 				<div class="author-list">
-					<div class="author-list-title">Written by</div>
+					<div class="author-list-title">{{t "Written by"}}</div>
 					{{#foreach authors}}
-					<div class="author-box{{^if profile_image}} no-avatar{{/if}}">
+					<div class="author-box">
 						{{#if profile_image}}
-						<img src="{{profile_image}}" alt="{{name}}'s Picture" class="author-avatar" />
+						<div class="author-avatar">
+							<img src="{{profile_image}}" alt="{{name}}" class="avatar" />
+						</div>
 						{{/if}}
-						<h2 class="author-title"><a href="{{url}}">{{name}}</a></h2>
-						{{#if bio}}
-						<p class="author-description">{{bio}}</p>
-						{{/if}}
-						<p class="author-links">
-							{{#if location}}
-							<span class="author-location"><i class="icon-map-marker" aria-hidden="true"></i> {{location}}</span>
+						<div class="author-details">
+							<h2 class="author-title"><a href="{{url}}">{{name}}</a></h2>
+							{{#if bio}}
+							<p class="author-description">{{bio}}</p>
 							{{/if}}
-							{{#if website}}
-							<span class="author-website"><i class="icon-chain" aria-hidden="true"></i> <a href="{{website}}" target="_blank">{{website}}</a></span>
-							{{/if}}
-							{{#if facebook}}
-							<span class="author-facebook"><i class="icon-facebook" aria-hidden="true"></i> <a href="{{facebook_url}}" target="_blank">Facebook</a></span>
-							{{/if}}
-							{{#if twitter}}
-							<span class="author-twitter"><i class="icon-twitter" aria-hidden="true"></i> <a href="{{twitter_url}}" target="_blank">Twitter</a></span>
-							{{/if}}
-						</p>
+							<p class="author-links">
+								{{#if location}}
+								<span class="author-location">{{> "icons/map-marker"}} {{location}}</span>
+								{{/if}}
+								{{#if website}}
+								<span class="author-website">{{> "icons/link"}} <a href="{{website}}" target="_blank" rel="noopener">{{t "Website"}}</a></span>
+								{{/if}}
+								{{#if facebook}}
+								<span class="author-facebook">{{> "icons/facebook"}} <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
+								{{/if}}
+								{{#if twitter}}
+								<span class="author-twitter">{{> "icons/twitter"}} <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
+								{{/if}}
+							</p>
+						</div>
 					</div>
 					{{/foreach}}
 				</div><!-- .author-list -->
 			</footer><!-- .post-footer -->
+			{{!-- The tag below includes the theme comments - partials/comments.hbs --}}
+			{{> comments}}
+
+			{{/if}}
+
 		</article><!-- .post -->
 
-		{{!-- The tag below includes the theme comments - partials/comments.hbs --}}
-		{{> comments}}
-
-		{{!-- Email subscribe form --}}
 		{{#if @labs.members}}
-		<div class="inner">
-			<section class="subscribe-box">
-				<h2 class="subscribe-box-title">Subscribe to {{@site.title}}</h2>
-				<p>Get the latest posts delivered right to your inbox.</p>
-				{{> subscribe-form}}
-			</section>
-		</div>
+			{{#if access}}
+
+				{{!-- If this is a public post, show subscribe --}}
+				{{#unless @member}}
+					<div class="inner">
+						<section class="subscribe-box">
+							<h2 class="subscribe-box-title">{{t "Subscribe to {sitetitle}" sitetitle=@site.title}}</h2>
+							<p>{{t "Subscribe today and get access to a private newsletter and new content every week!"}}</p>
+							{{> "member-subscribe-form"}}
+						</section><!-- .subscribe-box -->
+					</div><!-- .inner -->
+
+				{{/unless}}
+
+			{{else}}
+
+				<div class="inner">
+					<section class="signup-box {{visibility}}">
+
+						{{!-- If it's a post for paying subscribers, show upgrade or sign up --}}
+						<div class="signup-box-paid">
+							<h2 class="signup-box-title">{{t "This post is for paying subscribers only"}}</h2>
+							{{#if @member}}
+							<p>{{t "Upgrade your account to keep reading this post and get access to the full library of posts for paying subscribers only."}}</p>
+							<a class="button" href="{{@site.url}}/account/">{{t "View plans"}}</a>
+							{{else}}
+							<p>{{t "Sign up and upgrade your account to get access to the full library of posts for paying subscribers only."}}</p>
+							<a class="button" href="{{@site.url}}/signup/">{{t "Sign up"}}</a>
+							<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
+							{{/if}}
+						</div><!-- .signup-box-paid -->
+
+						{{!-- If it's a post for subscribers, show sign up --}}
+						<div class="signup-box-members">
+							<h2 class="signup-box-title">{{t "This post is for subscribers only"}}</h2>
+							<p>{{t "Sign up now to get access to the full library of posts for subscribers only."}}</p>
+							<a class="button" href="{{@site.url}}/signup/">{{t "Sign up"}}</a>
+							<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
+						</div><!-- .signup-box-members -->
+
+					</section><!-- .signup-box -->
+				</div><!-- .inner -->
+
+			{{/if}}
 		{{/if}}
 
 		{{!-- Previous/next post links --}}
@@ -90,7 +138,9 @@
 				<div class="nav-bg" style="background-image: url({{feature_image}})"></div>
 				{{/if}}
 				<div class="nav-inside">
-					<span class="nav-before">Next</span><span class="nav-title">{{title}}</span><span class="nav-date">{{date format="MMMM DD, YYYY"}}</span>
+					<span class="nav-before">{{t "Next"}}</span>
+					<span class="nav-title">{{title}}</span>
+					<span class="nav-date"><time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="LL"}}</time></span>
 				</div>
 			</a>
 			{{/next_post}}
@@ -100,12 +150,15 @@
 				<div class="nav-bg" style="background-image: url({{feature_image}})"></div>
 				{{/if}}
 				<div class="nav-inside">
-					<span class="nav-before">Previous</span><span class="nav-title">{{title}}</span><span class="nav-date">{{date format="MMMM DD, YYYY"}}</span>
+					<span class="nav-before">{{t "Previous"}}</span>
+					<span class="nav-title">{{title}}</span>
+					<span class="nav-date"><time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="LL"}}</time></span>
 				</div>
 			</a>
 			{{/prev_post}}
 		</nav><!-- .post-navigation -->
 
+		{{/post}}
+
 	</div><!-- .site-content -->
 </main><!-- .site-main -->
-{{/post}}

@@ -1,0 +1,153 @@
+/**
+ * 9. Widgets
+ */
+.widget {
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.widget-title {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.widget-navigation {
+  .menu-item {
+    display: block;
+    margin-bottom: 15px;
+
+    a {
+      border-color: transparent;
+
+      &:hover {
+        border-color: $color-accent;
+      }
+    }
+  }
+}
+
+.widget-recent-posts {
+  margin-bottom: 45px;
+
+  ul {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 -15px;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid $gray-lighter;
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1 1 300px;
+    -ms-flex: 1 1 300px;
+    flex: 1 1 300px;
+    margin: 0 15px 15px;
+  }
+}
+
+.recent-header {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 15px;
+}
+
+.recent-title {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 0 5px;
+
+  a {
+    border-color: transparent;
+    color: inherit;
+
+    &:hover {
+      border-color: $color-accent;
+    }
+  }
+}
+
+.recent-meta {
+  color: $gray-light;
+  font-family: $font-secondary;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.recent-thumb {
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  height: 60px;
+  margin: 0 0 15px 10px;
+  position: relative;
+  width: 80px;
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.widget-tags {
+  a {
+    background-color: transparent;
+    border: 1px solid $gray-darkest;
+    border-radius: 4px;
+    color: $gray-darkest;
+    display: inline-block;
+    font-weight: 700;
+    font-family: $font-secondary;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0 10px 10px 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-accent;
+      border-color: $color-accent;
+      color: $gray-lighter;
+    }
+  }
+}
+
+.contacts {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .widget-title,
+  .recent-title {
+    font-size: 18px;
+  }
+
+  .recent-meta {
+    font-size: 12px;
+  }
+}

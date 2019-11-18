@@ -1,0 +1,45 @@
+/**
+ * 6.3 Pagination
+ */
+.pagination {
+  color: #111;
+  font-family: $font-secondary;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 90px;
+  margin-top: 30px;
+  padding: 11px 60px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.newer-posts,
+.older-posts {
+  position: absolute;
+  top: 0;
+}
+
+.newer-posts {
+  left: 0;
+}
+
+.older-posts {
+  right: 0;
+}
+
+@media only screen and (min-width: 1401px) {
+  .pagination {
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pagination {
+    margin-bottom: 45px;
+    margin-top: 0;
+  }
+}

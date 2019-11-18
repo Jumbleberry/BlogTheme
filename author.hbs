@@ -7,32 +7,32 @@
 
 		{{!-- Everything inside the #author tags pulls data from the author --}}
 		{{#author}}
-		<header class="cover page-header">
+		<header class="cover archive-header">
 			{{#if cover_image}}
 			<div class="cover-bg" style="background-image: url({{cover_image}})"></div>
 			{{/if}}
 			<div class="cover-content">
 				<div class="inner">
-					<div class="post-count">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} by author</div>
-					<h1 class="page-title">{{name}}</h1>
+					<div class="archive-meta">{{plural ../pagination.total empty=(t "No posts by author") singular=(t "% post by author") plural=(t "% posts by author")}}</div>
+					<h1 class="archive-title">{{name}}</h1>
 					{{#if profile_image}}
-					<p><img src="{{profile_image}}" alt="{{name}}'s Picture" class="author-avatar" /></p>
+					<p class="author-avatar"><img src="{{profile_image}}" alt="{{name}}" class="avatar" /></p>
 					{{/if}}
 					{{#if bio}}
-					<p class="page-description">{{bio}}</p>
+					<p class="archive-description">{{bio}}</p>
 					{{/if}}
 					<p class="author-links">
 						{{#if location}}
-						<span class="author-location"><i class="icon-map-marker" aria-hidden="true"></i> {{location}}</span>
+						<span class="author-location">{{> "icons/map-marker"}} {{location}}</span>
 						{{/if}}
 						{{#if website}}
-						<span class="author-website"><i class="icon-chain" aria-hidden="true"></i> <a href="{{website}}" target="_blank">{{website}}</a></span>
+						<span class="author-website">{{> "icons/link"}} <a href="{{website}}" target="_blank" rel="noopener">{{t "Website"}}</a></span>
 						{{/if}}
 						{{#if facebook}}
-						<span class="author-facebook"><i class="icon-facebook" aria-hidden="true"></i> <a href="{{facebook_url}}" target="_blank">Facebook</a></span>
+						<span class="author-facebook">{{> "icons/facebook"}} <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a></span>
 						{{/if}}
 						{{#if twitter}}
-						<span class="author-twitter"><i class="icon-twitter" aria-hidden="true"></i> <a href="{{twitter_url}}" target="_blank">Twitter</a></span>
+						<span class="author-twitter">{{> "icons/twitter"}} <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a></span>
 						{{/if}}
 					</p>
 				</div><!-- .inner -->

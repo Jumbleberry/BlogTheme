@@ -1,0 +1,43 @@
+/**
+ * 12. Rainbow Code Highlighter
+ * https://craig.is/making/rainbows
+ */
+pre .comment {
+  color: #666;
+}
+
+pre .variable.global,
+pre .variable.class,
+pre .variable.instance {
+  color: #ef6155;
+}
+
+pre .constant.numeric,
+pre .constant.language,
+pre .constant.hex-color,
+pre .keyword.unit {
+  color: #f99b15;
+}
+
+pre .constant,
+pre .entity,
+pre .entity.class,
+pre .support {
+  color: $color-accent;
+}
+
+pre .constant.symbol,
+pre .string {
+  color: #48b685;
+}
+
+pre .entity.function,
+pre .support.css-property,
+pre .selector {
+  color: #06b6ef;
+}
+
+pre .keyword,
+pre .storage {
+  color: #815ba4;
+}

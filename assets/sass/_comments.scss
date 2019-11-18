@@ -1,0 +1,30 @@
+/**
+ * 6.2 Comments
+ */
+.comments-area {
+  margin-bottom: 60px;
+}
+
+.comments-title {
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-left: 40px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.comments-title .icon-plus {
+  background: $color-accent;
+  color: #fff;
+  left: 0;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+}
+
+@media only screen and (min-width: 1401px) {
+  .comments-title {
+    font-size: 18px;
+  }
+}

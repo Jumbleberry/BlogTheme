@@ -7,9 +7,9 @@
 
 		{{!-- The featured posts carousel or intro --}}
 		{{#get "posts" filter="featured:true" limit="5" include="authors,tags" as |featured_posts|}}
-			{{#foreach featured_posts}}
+			{{#foreach featured_posts visibility="all"}}
 				{{#if @first}}
-				<aside class="featured-posts slider-loading" aria-label="Featured">
+				<aside class="featured-posts slider-loading" aria-label="{{t "Featured"}}">
 					<div id="featured-slider" class="featured-slider">
 				{{/if}}
 						<div>
@@ -26,10 +26,10 @@
 										{{/if}}
 										<h2 class="post-title"><a href="{{{url}}}">{{title}}</a></h2>
 										<div class="post-meta">
-											by <span class="post-author">{{authors}}</span> on <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
+											{{t "By"}} <span class="post-author">{{authors}}</span> {{t "on"}} <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="LL"}}</time>
 										</div><!-- .post-meta -->
 										<div class="read-more">
-											<a class="button light" href="{{url}}" title="{{title}}">Read More</a>
+											<a class="button white" href="{{url}}" title="{{title}}">{{t "Read More"}}</a>
 										</div>
 									</div>
 								</div>
@@ -51,7 +51,9 @@
 								<h2 class="hero-title">{{@site.title}}</h2>
 								<p class="hero-text">{{@site.description}}</p>
 								{{#if @labs.members}}
-								<p class="subscribe"><a href="{{@site.url}}/subscribe/" class="button light">Subscribe</a></p>
+									{{#unless @member}}
+										<p class="hero-subscribe"><a href="{{@site.url}}/subscribe/" class="button white">{{t "Subscribe"}}</a></p>
+									{{/unless}}
 								{{/if}}
 							</div>
 						</div><!-- .inner -->
@@ -64,4 +66,17 @@
 		{{> "loop"}}
 
 	</div><!-- .site-content -->
+    {{#if @labs.members}}
+        {{!-- If this is a public post, show subscribe --}}
+        {{#unless @member}}
+            <div class="site-content inner-wide">
+                <section class="subscribe-box">
+                    <h2 class="subscribe-box-title">{{t "Subscribe to {sitetitle}" sitetitle=@site.title}}</h2>
+                    <p>{{t "Subscribe today and get access to a private newsletter and new content every week!"}}</p>
+                    {{> "member-subscribe-form"}}
+                </section><!-- .subscribe-box -->
+            </div><!-- .inner -->
+
+        {{/unless}}
+    {{/if}}
 </main><!-- .site-main -->

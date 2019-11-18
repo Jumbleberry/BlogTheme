@@ -1,0 +1,518 @@
+/**
+ * 11. Members
+ */
+/* Member login panel */
+.site-login {
+  background-color: #fff;
+  border: 1px solid $gray-lighter;
+  box-sizing: border-box;
+  list-style: none;
+  max-width: 100%;
+  opacity: 0;
+  padding: 30px 24px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  -webkit-transition: opacity .3s ease-in-out, visibility 0s .3s ease-in-out;
+  transition: opacity .3s ease-in-out, visibility 0s .3s ease-in-out;
+  visibility: hidden;
+  width: 240px;
+  z-index: 999;
+
+  .button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .account-link,
+  .signin-link {
+    margin-bottom: 15px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+.login-overlay {
+  background-color: rgba($gray-darkest, 0);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  visibility: hidden;
+  width: 100vw;
+}
+
+.login-opened {
+  .site {
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    width: 100vw;
+    z-index: 997;
+  }
+
+  #login-toggle {
+    z-index: 9999;
+  }
+
+  .site-login {
+    opacity: 1;
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    visibility: visible;
+  }
+
+  .login-overlay {
+    background-color: rgba($gray-darkest, .6);
+    opacity: 1;
+    visibility: visible;
+    z-index: 998;
+  }
+}
+
+/* Member forms */
+form[data-members-form] {
+  .form-group {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .subscribe-email {
+    display: block;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: 40px;
+  }
+
+  .button {
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .button-content {
+    white-space: nowrap;
+  }
+
+  .button-loader {
+    display: none;
+  }
+
+  .message {
+    font-size: 16px;
+    line-height: 1.66667;
+    margin: 15px 0 0;
+  }
+
+  .message-signup-success,
+  .message-signin-success,
+  .message-invalid,
+  .message-error {
+    display: none;
+  }
+
+  .message-signup-success,
+  .message-signin-success {
+    color: $color-accent;
+  }
+
+  .message-invalid,
+  .message-error {
+    color: $red;
+  }
+
+  &.loading {
+    .button-content {
+      visibility: hidden;
+    }
+
+    .button-loader {
+      display: block;
+      height: 30px;
+      left: 50%;
+      margin-left: -15px;
+      margin-top: -15px;
+      position: absolute;
+      top: 50%;
+      width: 30px;
+
+      svg {
+        height: 30px;
+      }
+    }
+  }
+
+  &.invalid .message-invalid,
+  &.error .message-error {
+    display: block;
+  }
+
+  &.success {
+    &.signup-form,
+    &.subscribe-form {
+      .message-signup-success {
+        display: block;
+      }
+    }
+
+    &.signin-form {
+      .message-signin-success {
+        display: block;
+      }
+    }
+  }
+}
+
+.special-template {
+  form[data-members-form] {
+    position: relative;
+
+    .message {
+      margin-top: 20px;
+      position: absolute;
+      text-align: center;
+      top: 100%;
+      width: 100%;
+    }
+
+    &.loading,
+    &.invalid,
+    &.error,
+    &.success {
+      .message-note {
+        display: none;
+      }
+    }
+  }
+}
+
+.widget,
+.subscribe-box {
+  form[data-members-form] {
+    .message-signup-success,
+    .message-signin-success {
+      color: $gray;
+    }
+
+    .message-invalid,
+    .message-error {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Members only posts */
+.subscribe-box,
+.signup-box {
+  background-color: $gray-lighter;
+  margin-bottom: 60px;
+  padding: 30px 30px 40px;
+}
+
+.subscribe-box {
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.subscribe-box-title {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.signup-box {
+  text-align: center;
+
+  .button {
+    margin-bottom: 15px;
+    min-width: 160px;
+  }
+
+  .note {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  &.paid {
+    .signup-box-members {
+      display: none;
+    }
+  }
+
+  &.members {
+    .signup-box-paid {
+      display: none;
+    }
+  }
+}
+
+.signup-box-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Member templates */
+.site-membership,
+.site-account {
+  .page-header {
+    margin-bottom: 60px;
+    margin-top: 60px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 60px;
+    }
+  }
+
+  .page-title {
+    margin-bottom: 30px;
+  }
+
+  .page-content {
+    padding-bottom: 60px;
+  }
+}
+
+/* Membership plans */
+.membership-box {
+  max-width: 1100px;
+}
+
+.membership-box-title {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.membership-plans {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -15px;
+}
+
+.membership-plan {
+  border: 1px solid $gray-darkest;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 240px;
+  -ms-flex: 1 0 240px;
+  flex: 1 0 240px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 15px 30px;
+  padding: 30px;
+  text-align: center;
+  -webkit-transition: border-color .3s ease;
+  transition: border-color .3s ease;
+
+  &:hover {
+    border-color: $color-accent;
+
+    .button {
+      background-color: $color-accent;
+      border-color: $color-accent;
+      color: $gray-darkest;
+    }
+  }
+}
+
+.membership-plan-header {
+  margin-bottom: 30px;
+
+  h3 {
+    margin: 0 0 10px;
+  }
+
+  small {
+    color: $gray;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+
+.membership-plan-content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 1.5;
+
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.membership-plan-footer {
+  .button {
+    display: block;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Notifications */
+.notification {
+  background: $color-accent;
+  box-sizing: border-box;
+  color: $gray-darkest;
+  left: 0;
+  line-height: 1.5;
+  padding: 20px 70px 20px 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+  -webkit-transition: -webkit-transform .35s ease-in-out .5s, visibility .35s ease-in-out .5s;
+  -webkit-transition: transform .35s ease-in-out .5s, visibility .35s ease-in-out .5s;
+  transition: transform .35s ease-in-out .5s, visibility .35s ease-in-out .5s;
+  visibility: hidden;
+  z-index: 9999;
+
+  .notification-close {
+    border: 0;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30px;
+  }
+
+  .icon-close {
+    width: 24px;
+  }
+}
+
+.subscribe-success .notification-subscribe,
+.signup-success .notification-signup,
+.signin-success .notification-signin,
+.checkout-success .notification-checkout {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+
+  &.closed {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  form[data-members-form] {
+    .subscribe-email {
+      height: 42px;
+    }
+  }
+
+  .membership-box-title {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .site-login {
+    padding: 20px 15px;
+  }
+
+  .signup-box,
+  .subscribe-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .signup-box-title {
+    font-size: 24px;
+  }
+
+  form[data-members-form] {
+    .form-group {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .button {
+      -webkit-align-self: flex-start;
+      align-self: flex-start;
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      margin: 15px 0 0;
+      width: 100%;
+    }
+  }
+
+  .site-membership,
+  .site-account {
+    .page-header {
+      margin-bottom: 45px;
+      margin-top: 45px;
+
+      &:last-child {
+        padding-bottom: 45px;
+      }
+    }
+
+    .page-content {
+      padding-bottom: 45px;
+    }
+  }
+
+  .membership-plan {
+    padding: 20px 15px;
+  }
+
+  .membership-plan-footer {
+    .button {
+      margin-top: 0;
+    }
+  }
+
+  .notification {
+    padding-left: 15px;
+    padding-right: 55px;
+
+    .notification-close {
+      right: 15px;
+    }
+  }
+}

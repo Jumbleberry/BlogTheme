@@ -1,33 +1,24 @@
-<aside class="sidebar" aria-label="Sidebar">
+<aside class="sidebar">
 	<div class="sidebar-scrollable">
+		<button id="sidebar-hide" class="sidebar-toggle"><span class="screen-reader-text">{{t "Close Sidebar"}}</span><span aria-hidden="true" class="icon-close"></span></button>
 		<div class="widget-area">
+
 			{{#if @site.navigation}}
+			<nav class="widget widget-navigation">
+				<h2 class="widget-title">{{t "Explore Website"}}</h2>
 				{{navigation}}
+			</nav><!-- .widget -->
 			{{/if}}
-			<section class="widget widget-text">
-				<h2 class="widget-title">About {{@site.title}}</h2>
-				<p> Jumbleberry's blog is driven by performance marketing leaders that share their knowledge to help you master the affiliate world. Keep up-to-date on the industry updates and latest Jumbleberry news.</p>
-			</section><!-- .widget -->
-			{{#if @labs.members}}
-			<section class="widget widget-newsletter">
-				<h2 class="widget-title">{{@site.title}} Newsletter</h2>
-				<p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
-				{{subscribe_form form_class="gh-subscribe-form" placeholder="Your email address"}}
-			</section><!-- .widget -->
-			{{/if}}
-			<section class="widget widget-text">
-				<h2 class="widget-title">Contact</h2>
-				<p> Jumbleberry is a paid media customer acquisition engine for direct-to-consumer brands. Interested in learning how we can help you scale your brand? Contact us for more information.
- <br>
- <br>
- If you are an affiliate interested in running traffic on the Jumbleberry network, <a href="https://partners.jumbleberry.com/signup/affiliate"> sign up to our platform </a> or contact us below. </p>
-				<ul class="contacts">
-					<li><span class="icon icon-envelope" aria-hidden="true"></span> <a href="mailto:info@jumbleberry.com"> info@jumbleberry.com </a> </li>
-					<li><span class="icon icon-map-marker" aria-hidden="true"></span> <a href="https://goo.gl/maps/kuxBAp6Z96vtrnid9"> 171 E Liberty Street, Toronto, ON M6K 3P6 </a> </li>
-					<li><span class="icon icon-phone" aria-hidden="true"></span> +1 888-832-9785</li>
-				</ul>
-			</section><!-- .widget -->
+
+			{{!-- Includes the text widget - partials/widget-text1.hbs --}}
+			{{> "widget-text1"}}
+
+			{{!-- If members enabled and user not logged in, includes the subscribe form widget - partials/widget-subscribe.hbs --}}
+			{{> "widget-subscribe"}}
+
+			{{!-- Includes the text widget - partials/widget-text2.hbs --}}
+			{{> "widget-text2"}}
+
 		</div><!-- .widget-area -->
-		<a class="sidebar-toggle" href="#"><span class="screen-reader-text">Close Sidebar</span><span aria-hidden="true" class="icon-close-custom"></span></a>
 	</div><!-- .sidebar-scrollable -->
 </aside><!-- .sidebar -->

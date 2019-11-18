@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+	{{!-- Document Settings --}}
+	<meta charset="utf-8">
+
+	{{!-- Page Meta --}}
+	<title>{{@site.title}} — {{t "Sign Up"}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{!-- Styles --}}
+	{{> custom-fonts}}
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+	{{#if @site.cover_image}}
+		{{> site-cover image=@site.cover_image}}
+	{{/if}}
+
+	{{ghost_head}}
+</head>
+<body class="special-template">
+
+	{{#if @member}}
+
+	{{!-- Logged in: Redirect home --}}
+	<script>window.location = '{{@site.url}}';</script>
+
+	{{else}}
+
+	<div id="page" class="site">
+		<main class="site-main">
+			<nav class="top-navigation">
+				<a class="button white" href="{{@site.url}}">{{{t "Back to homepage"}}}</a>
+			</nav>
+			<div class="site-content site-signup inner">
+				<header class="page-header">
+					<h1 class="page-title">{{t "Create an Account"}}</h1>
+					<p class="page-description">{{t "Don't have an account with {sitetitle}? Creating one takes just minutes." sitetitle=@site.title}}</p>
+				</header><!-- .page-header -->
+				<div class="page-content">
+					{{> "member-signup-form"}}
+				</div><!-- .page-content -->
+			</div><!-- .site-content -->
+		</main><!-- .site-main -->
+	</div><!-- .site -->
+
+	{{/if}}
+
+</body>
+</html>

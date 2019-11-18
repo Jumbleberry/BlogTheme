@@ -1,0 +1,9 @@
+{{!-- Widget to display a tagcloud --}}
+<section class="widget widget-tags">
+  <h2 class="widget-title">{{t "Tags"}}</h2>
+  <div class="tagcloud">
+    {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+    {{tags separator=""}}
+    {{/get}}
+  </div>
+</section><!-- .widget -->

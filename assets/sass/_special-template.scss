@@ -1,0 +1,109 @@
+/**
+ * 7. Special Template
+ */
+.special-template {
+  min-height: 100vh;
+
+  .site {
+    background-color: $gray-darkest;
+    color: #fff;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &:before {
+      -webkit-animation-delay: .15s;
+      animation-delay: .15s;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: "";
+      left: 0;
+      opacity: .4;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .site-main {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
+  .site-content {
+    padding-bottom: 90px;
+    padding-top: 90px;
+    position: relative;
+    text-align: center;
+  }
+
+  .top-navigation {
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+  }
+
+  .page-title {
+    color: #fff;
+  }
+
+  .page-content {
+    a:not(.button) {
+      border-color: transparent;
+      color: $color-accent;
+
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+  }
+
+  .subscribe-email {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $gray-light;
+  }
+  
+  :-moz-placeholder {
+    color: $gray-light;
+  }
+  
+  ::-moz-placeholder {
+    color: $gray-light;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: $gray-light;
+  }
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-title {
+  margin: 0 0 15px;
+}
+
+.page-description {
+  font-style: italic;
+}

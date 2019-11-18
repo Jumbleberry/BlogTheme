@@ -7,9 +7,9 @@
 	"use strict";
 
 	var $body = $('body'),
-		$searchField = $('#search-field'),
-		$searchResults = $('#search-results'),
-		$searchCount = $('.results-count');
+			$searchField = $('#search-field'),
+			$searchResults = $('#search-results'),
+			$searchCount = $('.results-count');
 
 	$(document).ready(function(){
 
@@ -26,7 +26,7 @@
 		});
 
 		// Scroll to top
-		$('.top-link').on('click', function(e) {
+		$('#top-link').on('click', function(e) {
 			$('html, body').animate({
 				'scrollTop': 0
 			});
@@ -40,7 +40,7 @@
 
 		// Initialize featured posts slider
 		var $featSlider = $('#featured-slider'),
-			$featCounter = $featSlider.next('.featured-counter');
+				$featCounter = $featSlider.next('.featured-counter');
 
 		$featSlider.on('init reInit', function(event, slick, currentSlide, nextSlide){
 			var current = (currentSlide ? currentSlide : 0) + 1;
@@ -57,8 +57,8 @@
 			arrows : true,
 			dots : false,
 			fade : true,
-			prevArrow : '<button type="button" class="slick-prev square"><span class="icon-left-custom" aria-hidden="true"></span><span class="screen-reader-text">Previous</span></button>',
-			nextArrow : '<button type="button" class="slick-next square"><span class="icon-right-custom" aria-hidden="true"></span><span class="screen-reader-text">Next</span></button>',
+			prevArrow : '<button type="button" class="slick-prev"><span class="icon-angle-left" aria-hidden="true"></span><span class="screen-reader-text">Previous</span></button>',
+			nextArrow : '<button type="button" class="slick-next"><span class="icon-angle-right" aria-hidden="true"></span><span class="screen-reader-text">Next</span></button>',
 		});
 
 		$featSlider.fadeIn(600, function(){
@@ -72,16 +72,16 @@
 				width = _this.attr('width'),
 				height = _this.attr('height'),
 				ratio = width / height;
-			_this.wrap("<a href='" + _this.attr("src") + "' />");
 			$container.css({'flex' : ratio + ' 1 0%' });
 		});
 
 		$('.kg-gallery-card').each( function() {
 			var _this = $(this);
-			_this.find('a').simpleLightbox({
-				captions: false,
-				closeText: '<span aria-hidden="true" class="icon-close-custom"></span>',
-				navText: ['<span class="icon-left-custom" aria-hidden="true"></span>','<span class="icon-right-custom" aria-hidden="true"></span>']
+			_this.find('img').simpleLightbox({
+				sourceAttr: 'src',
+        captions: false,
+				closeText: '<span aria-hidden="true" class="icon-close"></span>',
+				navText: ['<span class="icon-angle-left" aria-hidden="true"></span>','<span class="icon-angle-right" aria-hidden="true"></span>']
 			});
 		});
 
@@ -104,9 +104,14 @@
 			}
 			e.preventDefault();
 		});
-		$('.overlay').on('click', function(e){
-			$body.removeClass('sidebar-opened search-opened');
-			searchField.clear();
+		$('#login-toggle').on('click', function(e){
+			$body.toggleClass('login-opened');
+			e.preventDefault();
+		});
+
+		$('.overlay, .login-overlay').on('click', function(e){
+			$body.removeClass('sidebar-opened search-opened login-opened');
+			$searchField.val('');
 			e.preventDefault();
 		});
 
@@ -149,7 +154,7 @@
 				if ( ! disqus_loaded ) {
 					$.ajax({
 						type: "GET",
-						url: "//" + disqus_shortname + ".disqus.com/embed.js",
+						url: "https://" + disqus_shortname + ".disqus.com/embed.js",
 						dataType: "script",
 						cache: true
 					});
@@ -165,25 +170,10 @@
 				}
 			});
 		}
-
-		// Display Instagram feed
-		if ( typeof instagram_user_id !== 'undefined' && typeof instagram_access_token !== 'undefined' ) {
-			if ( $('#instafeed').length ) {
-				var userFeed = new Instafeed({
-					get: 'user',
-					userId: instagram_user_id,
-					accessToken: instagram_access_token,
-					limit: 6,
-					resolution: 'low_resolution',
-					template: '<div class="instagram-item"><div class="instagram-item-inside"><a target="_blank" href="{{link}}"><img src="{{image}}" alt="{{caption}}" /></a></div></div>'
-				});
-				userFeed.run();
-			}
-		}
 	});
 
 	function adjustCover() {
-		setElementHeight('.post-header.cover');
+		setElementHeight('.cover.full-height');
 	}
 
 	// Set the new height of an element

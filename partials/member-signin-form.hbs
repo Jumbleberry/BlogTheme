@@ -1,0 +1,14 @@
+{{!-- Member sign in form --}}
+<form data-members-form="signin" class="signin-form">
+	<div class="form-group">
+		<input data-members-email class="subscribe-email" type="email" name="email" placeholder="{{t "Your email address"}}" />
+		<button class="button" type="submit">
+			<span class="button-content">{{t "Send login link"}}</span>
+			<span class="button-loader">{{> "icons/loader"}}</span>
+		</button>
+	</div>
+	{{> "member-form-messages"}}
+	<div class="message message-note">
+		{{t "Don't have an account yet?"}} <a href="{{@site.url}}/signup/">{{t "Sign up"}}</a>
+	</div>
+</form><!-- signin-form -->
