@@ -29,9 +29,6 @@
 				</div><!-- .cover-content -->
 			</header><!-- .cover -->
 
-			{{!-- If the user has access, show post content --}}
-			{{#if access}}
-
 			<div class="post-content inner">
 				{{content}}
 			</div><!-- .post-content -->
@@ -79,56 +76,7 @@
 			{{!-- The tag below includes the theme comments - partials/comments.hbs --}}
 			{{> comments}}
 
-			{{/if}}
-
 		</article><!-- .post -->
-
-		{{#if @labs.members}}
-			{{#if access}}
-
-				{{!-- If this is a public post, show subscribe --}}
-				{{#unless @member}}
-					<div class="inner">
-						<section class="subscribe-box">
-							<h2 class="subscribe-box-title">{{t "Subscribe to {sitetitle}" sitetitle=@site.title}}</h2>
-							<p>{{t "Subscribe today and get access to a private newsletter and new content every week!"}}</p>
-							{{> "member-subscribe-form"}}
-						</section><!-- .subscribe-box -->
-					</div><!-- .inner -->
-
-				{{/unless}}
-
-			{{else}}
-
-				<div class="inner">
-					<section class="signup-box {{visibility}}">
-
-						{{!-- If it's a post for paying subscribers, show upgrade or sign up --}}
-						<div class="signup-box-paid">
-							<h2 class="signup-box-title">{{t "This post is for paying subscribers only"}}</h2>
-							{{#if @member}}
-							<p>{{t "Upgrade your account to keep reading this post and get access to the full library of posts for paying subscribers only."}}</p>
-							<a class="button" href="{{@site.url}}/account/">{{t "View plans"}}</a>
-							{{else}}
-							<p>{{t "Sign up and upgrade your account to get access to the full library of posts for paying subscribers only."}}</p>
-							<a class="button" href="{{@site.url}}/signup/">{{t "Sign up"}}</a>
-							<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
-							{{/if}}
-						</div><!-- .signup-box-paid -->
-
-						{{!-- If it's a post for subscribers, show sign up --}}
-						<div class="signup-box-members">
-							<h2 class="signup-box-title">{{t "This post is for subscribers only"}}</h2>
-							<p>{{t "Sign up now to get access to the full library of posts for subscribers only."}}</p>
-							<a class="button" href="{{@site.url}}/signup/">{{t "Sign up"}}</a>
-							<p class="note">{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></p>
-						</div><!-- .signup-box-members -->
-
-					</section><!-- .signup-box -->
-				</div><!-- .inner -->
-
-			{{/if}}
-		{{/if}}
 
 		{{!-- Previous/next post links --}}
 		<nav class="post-navigation">
