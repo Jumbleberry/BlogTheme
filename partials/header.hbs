@@ -19,7 +19,7 @@
 				<ul class="actions">
 					{{!-- If members enabled, show the login panel --}}
 					{{#if @labs.members}}
-					<li class="actions-item">
+					{{!-- <li class="actions-item">
 						<button id="login-toggle" class="login-toggle">{{> "icons/user"}}</button>
 						<ul class="site-login">
 							{{#if @member}}
@@ -31,7 +31,7 @@
 							{{/if}}
 						</ul><!-- .site-login -->
 						<div class="login-overlay"></div>
-					</li>
+					</li> --}}
 					{{/if}}
 					<li class="actions-item">
 						<button id="search-show" class="search-toggle"><span class="screen-reader-text">{{t "Show Search"}}</span>{{> "icons/search"}}</button>
