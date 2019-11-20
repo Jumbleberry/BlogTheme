@@ -77,6 +77,18 @@
 			{{> comments}}
 
 		</article><!-- .post -->
+		{{#if @labs.members}}	
+			{{!-- If this is a public post, show subscribe --}}	
+			{{#unless @member}}	
+				<div class="inner">	
+					<section class="subscribe-box">	
+						<h2 class="subscribe-box-title">{{t "Subscribe to {sitetitle}" sitetitle=@site.title}}</h2>	
+						<p>{{t "Subscribe today and get access to a private newsletter and new content every week!"}}</p>	
+						{{> "member-subscribe-form"}}	
+					</section><!-- .subscribe-box -->	
+				</div><!-- .inner -->	
+			{{/unless}}
+		{{/if}}
 
 		{{!-- Previous/next post links --}}
 		<nav class="post-navigation">
