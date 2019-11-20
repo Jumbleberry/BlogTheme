@@ -2020,7 +2020,7 @@ blockquote,
 
 /* Background Images */
 .cover {
-  background-color: #111;
+  background-color: rgba(55, 55, 55, 0.65);
   color: #fff;
   display: table;
   height: 360px;
