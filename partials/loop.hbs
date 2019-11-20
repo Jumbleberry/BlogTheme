@@ -1,7 +1,7 @@
 <div class="post-grid">
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts visibility="all"}}
-	<article class="grid-item {{post_class}}">
+	<article class="grid-item {{post_class}}" onclick="window.location.href = '{{{url}}}'">
 		<div class="post-inside">
 			{{#if feature_image}}
 			<div class="post-bg" style="background-image: url({{feature_image}})"></div>
