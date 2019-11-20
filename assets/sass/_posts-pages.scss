@@ -271,7 +271,7 @@
 }
 
 .post-inside {
-  background-color: rgba(22,39,101,0.8);
+  background-color: rgba(55,55,55,.65);
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -519,6 +519,7 @@
   .slick-slide {
     height: 600px;
     position: relative;
+    background: rgba(122, 122, 122, 1);
   }
 
   .slick-arrow {

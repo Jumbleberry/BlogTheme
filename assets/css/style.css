@@ -1994,7 +1994,7 @@ blockquote,
 }
 
 .post-inside {
-  background-color: rgba(22, 39, 101, 0.8);
+  background-color: rgba(55, 55, 55, 0.65);
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -2214,6 +2214,7 @@ blockquote,
 #featured-slider .slick-slide {
   height: 600px;
   position: relative;
+  background: #7a7a7a;
 }
 #featured-slider .slick-arrow {
   background-color: #5072ff;
