@@ -1,7 +1,7 @@
 <div class="post-grid">
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts visibility="all"}}
-	<article class="grid-item {{post_class}}">
+	<article class="grid-item {{post_class}}" onclick="window.location.href = '{{url}}'">
 		<header class="post-header">
 			{{#if tags}}
 			<div class="post-tags">
