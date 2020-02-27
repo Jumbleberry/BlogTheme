@@ -306,7 +306,7 @@ html {
 
 body {
   background: #fff;
-  color: #999;
+  color: #525252;
   line-height: 1.66667;
 }
 
@@ -395,7 +395,7 @@ pre {
 }
 
 :not(pre) > code {
-  color: #999;
+  color: #525252;
 }
 
 blockquote {
@@ -576,7 +576,7 @@ a.button {
 a.button.light {
   background: transparent;
   border-color: #ccc;
-  color: #999;
+  color: #525252;
 }
 
 a.square {
@@ -645,20 +645,20 @@ a.square:active {
 
 /* Placeholder text color */
 ::-webkit-input-placeholder {
-  color: #999;
+  color: #525252;
 }
 
 :-moz-placeholder {
-  color: #999;
+  color: #525252;
 }
 
 ::-moz-placeholder {
-  color: #999;
+  color: #525252;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: #999;
+  color: #525252;
 }
 
 /* Videos, audios and embeds */
@@ -684,7 +684,7 @@ img {
   margin: 0 0 30px;
 }
 .kg-card figcaption {
-  color: #999;
+  color: #525252;
   font-family: gilroy, sans-serif;
   font-size: 12px;
   letter-spacing: 1px;
@@ -706,7 +706,7 @@ img {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  color: #999;
+  color: #525252;
   min-height: 140px;
   text-decoration: none;
   -webkit-transition-property: border-color;
@@ -742,7 +742,7 @@ img {
 }
 
 .kg-bookmark-description {
-  color: #999;
+  color: #525252;
   display: -webkit-box;
   font-size: 16px;
   font-weight: 400;
@@ -771,7 +771,7 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #999;
+  color: #525252;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -1840,7 +1840,7 @@ blockquote,
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  color: #999;
+  color: #525252;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2127,7 +2127,7 @@ blockquote,
 }
 .author-template .post-meta a,
 .tag-template .post-meta a {
-  color: #999;
+  color: #525252;
 }
 .author-template .post-meta a:hover,
 .tag-template .post-meta a:hover {
@@ -2193,7 +2193,7 @@ blockquote,
   position: relative;
 }
 .slider-loading:before {
-  border: 4px solid #999;
+  border: 4px solid #525252;
   border-radius: 50%;
   content: "";
   height: 36px;
@@ -3354,7 +3354,7 @@ form[data-members-form].success.signin-form .message-signin-success {
 .widget form[data-members-form] .message-signin-success,
 .subscribe-box form[data-members-form] .message-signup-success,
 .subscribe-box form[data-members-form] .message-signin-success {
-  color: #999;
+  color: #525252;
 }
 .widget form[data-members-form] .message-invalid,
 .widget form[data-members-form] .message-error,
@@ -3489,7 +3489,7 @@ form[data-members-form].success.signin-form .message-signin-success {
   margin: 0 0 10px;
 }
 .membership-plan-header small {
-  color: #999;
+  color: #525252;
   font-size: 36px;
   line-height: 1.2;
 }
@@ -3891,7 +3891,7 @@ body.hidden-scroll {
 
 .sl-spinner {
   display: none;
-  border: 4px solid #999;
+  border: 4px solid #525252;
   border-radius: 50%;
   height: 36px;
   left: 50%;
